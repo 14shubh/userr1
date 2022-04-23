@@ -14,7 +14,7 @@
 }
 
 body {
-
+  scroll-behavior: smooth;
   background: radial-gradient (ellipse at bottom, 3 #022227 0%, #000000 100%);
   position: relative;
   margin: 0;
