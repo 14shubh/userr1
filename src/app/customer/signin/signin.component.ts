@@ -19,7 +19,7 @@ export class SigninComponent implements OnInit {
       if(data.status){
         localStorage.setItem('jwt_token',data.token);
         localStorage.setItem('UserLoginId',data.result._id);
-        localStorage.setItem('user-profile',JSON.stringify(data.result))
+        localStorage.setItem('user-profile',JSON.stringify(data.result));
        
          this._router.navigate(['home']);
       }else{
@@ -41,6 +41,9 @@ export class SigninComponent implements OnInit {
         if(userData.status){
           localStorage.setItem('jwt_token',userData.token);
           localStorage.setItem('UserLoginId',userData.result._id);
+          console.log(userData);
+          localStorage.setItem('user-profile',JSON.stringify(data));
+
            this._router.navigate(['home']);
         }else{
           alert("not found");
@@ -49,6 +52,8 @@ export class SigninComponent implements OnInit {
           alert("Email not found please Sign up");
           this._router.navigate(["sign-up"]);
         })
+    },(error)=>{
+      console.log(error);
     })
     
   }

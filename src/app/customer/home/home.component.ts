@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     private _authenticate: AuthenticateService
   ) {
     this._category.CategoryList().subscribe((data) => {
-      this.CategoryList = data.slice(1, 6);
+      this.CategoryList = data;
     });
  
     this._product.ProductList().subscribe((data) => {

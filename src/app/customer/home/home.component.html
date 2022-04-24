@@ -16,8 +16,8 @@
         <h2>Category</h2>
     </div>
     <div class="row categories">
-        <div class="col-lg-2 col-md-4 col-sm-6 category-img" *ngFor="let Categories of CategoryList">
-            <a href="#">
+        <div class="col-lg-2 col-md-4 col-sm-6 category-img" *ngFor="let Categories of CategoryList.slice(1,7);">
+            <a>
                 <img src="{{ Categories.categoryImage }}" alt="category image" />
                 <span>{{ Categories.categoryName }}</span>
             </a>
