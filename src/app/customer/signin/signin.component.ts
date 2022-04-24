@@ -37,6 +37,7 @@ export class SigninComponent implements OnInit {
   public signinWithGoogle(){
     this.socialService.signIn(GoogleLoginProvider.PROVIDER_ID)
     this.socialService.authState.subscribe(data=>{
+      console.log(data);
       this._authenticate.signinWithGoogle(data.email).subscribe(userData=>{
         if(userData.status){
           localStorage.setItem('jwt_token',userData.token);
