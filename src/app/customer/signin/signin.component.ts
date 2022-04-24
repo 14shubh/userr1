@@ -28,7 +28,7 @@ export class SigninComponent implements OnInit {
     },err=>{
       if(err instanceof HttpErrorResponse){
           if(err.status==500)
-            window.alert("Internal Server Error");
+            window.alert("Please check your email or password");
       }
     })
   }

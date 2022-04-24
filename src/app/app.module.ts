@@ -8,11 +8,19 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthenticateService } from './service/Authenticate.service';
 import { TokenIntercepterService } from './service/token-intercepter.service';
 import { PageNoteFoundComponent } from './page-note-found/page-note-found.component';
+import { NeclacesComponent } from './Category/neclaces/neclaces.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditComponent } from './edit/edit.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNoteFoundComponent
+    PageNoteFoundComponent,
+    NeclacesComponent,
+    ProfileComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

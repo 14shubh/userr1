@@ -1,0 +1,15 @@
+<div class="user-profile right">
+    <div class="contact-address">
+        <h3 class="address-title">Profile</h3>
+        <div class="address-form">
+            <input type="text" name="name" id="name" placeholder="name" [value]="user_data.name" readonly/>
+            <input type="email" name="email" id="email" placeholder="email" readonly [value]="user_data.email"/>
+            <input type="text" name="local-address" id="local-address" placeholder="address" readonly/>
+            <div class="address">
+                <input type="text" name="state" id="state" placeholder="state" readonly/>
+                <input type="text" name="country" id="country" value="India" readonly placeholder="country"/>
+            </div>
+            <input type="text" name="mobile" id="mobile" placeholder="mobile"[value]="user_data.number" readonly/>
+        </div>
+    </div>
+</div>

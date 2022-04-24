@@ -16,6 +16,9 @@ import { PageNoteFoundComponent } from './page-note-found/page-note-found.compon
 import { PlaceorderComponent } from './customer/placeorder/placeorder.component';
 import { CategorySpecialComponent } from './customer/category-special/category-special.component';
 import { UserProfileComponent } from './customer/user-profile/user-profile.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditComponent } from './edit/edit.component';
+import { DeleteComponent } from './delete/delete.component';
  
 const routes: Routes = [
   {
@@ -76,7 +79,25 @@ const routes: Routes = [
       {
         path: 'profile',
         component: UserProfileComponent,
-        canActivate: [AuthGuard]
+        children : [
+          {
+            path:"",
+            component:ProfileComponent,
+          },
+          {
+            path:"profile",
+            component:ProfileComponent,
+          },
+          {
+            path:'edit',
+            component:EditComponent,
+          },
+          {
+            path:'delete',
+            component:DeleteComponent,
+          }
+        ],
+        canActivate: [AuthGuard],
       },
       {
         path:"special",

@@ -1,3 +1,30 @@
 <div class="container">
-    .
+        <div class="row user-profile-page">
+            <div class="col-3 left">
+                <div class="profile-page-navigation">
+                    <div class="links">
+                        <div class="user-image">
+                            <a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                            <span class="user_name">{{profile_data.name}}</span>
+                        </div>
+                        <div class="page-links">
+                            <ul>
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <!-- <li>
+                                    <a href="#">Edit Profile</a>
+                                </li> -->
+                                <!-- <li>
+                                    <a href="#">Delete Profile</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 right">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
 </div>
