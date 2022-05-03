@@ -89,11 +89,11 @@ const routes: Routes = [
             component:ProfileComponent,
           },
           {
-            path:'edit',
+            path:'edit-profile',
             component:EditComponent,
           },
           {
-            path:'delete',
+            path:'delete-profile',
             component:DeleteComponent,
           }
         ],
